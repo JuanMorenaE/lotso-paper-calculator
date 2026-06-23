@@ -2,34 +2,27 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
-:root{
---pk0:#FBEAF0;--pk1:#F4C0D1;--pk2:#ED93B1;--pk3:#D4537E;--pk4:#993556;--pk5:#72243E;
-}
+:root{--pk0:#FBEAF0;--pk1:#F4C0D1;--pk2:#ED93B1;--pk3:#D4537E;--pk4:#993556;--pk5:#72243E}
 .app{padding:1rem;max-width:720px;margin:0 auto;font-family:'Nunito',sans-serif}
 .brand{text-align:center;padding:1.25rem 1rem .75rem;margin-bottom:.5rem}
-.brand-name{font-size:24px;font-weight:800;color:var(--pk4);letter-spacing:-.5px}
+.brand-name{font-size:24px;font-weight:800;color:var(--pk4)}
 .brand-sub{font-size:11px;font-weight:700;color:var(--pk2);letter-spacing:.12em;text-transform:uppercase;margin-top:3px}
 .dots{display:flex;justify-content:center;gap:5px;margin-top:.5rem}
 .dot{width:5px;height:5px;border-radius:50%;background:var(--pk1)}
 .dot.m{width:7px;height:7px;background:var(--pk3)}
-
 .section{background:#fff;border:1.5px solid var(--pk1);border-radius:18px;padding:1rem 1.25rem;margin-bottom:.75rem}
 .stitle{font-size:11px;font-weight:800;color:var(--pk4);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;display:flex;align-items:center;gap:6px}
 .stitle i{font-size:15px;color:var(--pk3)}
-
 .pill-row{display:flex;gap:6px;margin-bottom:.75rem}
 .pill{flex:1;height:36px;border:1.5px solid var(--pk1);border-radius:20px;background:var(--pk0);color:var(--pk3);font-size:12px;font-family:'Nunito',sans-serif;font-weight:700;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:4px}
 .pill.on{background:var(--pk3);color:#fff;border-color:var(--pk3)}
 .pill i{font-size:14px}
-
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
 .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px}
 .field{display:flex;flex-direction:column;gap:4px}
-.field label{font-size:11px;font-weight:700;color:var(--pk3);letter-spacing:.02em}
+.field label{font-size:11px;font-weight:700;color:var(--pk3)}
 input[type=number],select,input[type=text]{width:100%;height:38px;padding:0 12px;border:1.5px solid var(--pk1);border-radius:10px;background:var(--pk0);color:var(--pk5);font-size:14px;font-family:'Nunito',sans-serif;font-weight:700;transition:border-color .15s}
 input:focus,select:focus{outline:none;border-color:var(--pk3);box-shadow:0 0 0 3px #D4537E22}
-select option{background:#fff;color:var(--pk5)}
-
 .ink-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .ink-card{border:1.5px solid var(--pk1);border-radius:12px;padding:.75rem;background:var(--pk0)}
 .ink-label{font-size:12px;font-weight:800;color:var(--pk5);margin-bottom:.5rem;display:flex;align-items:center;gap:6px}
@@ -37,18 +30,21 @@ select option{background:#fff;color:var(--pk5)}
 .ink-card .field{margin-bottom:6px}
 .ink-card .field:last-child{margin-bottom:0}
 
+.paper-row{display:grid;grid-template-columns:1fr 80px 90px 36px;gap:6px;align-items:center;margin-bottom:6px}
+.paper-row-block{display:grid;grid-template-columns:1fr 80px 80px 80px 36px;gap:6px;align-items:center;margin-bottom:6px}
+.col-labels{display:grid;gap:6px;margin-bottom:4px}
+.col-labels span{font-size:10px;font-weight:700;color:var(--pk2);text-align:center}
+.col-labels span:first-child{text-align:left}
+
+.paper-tag{display:inline-flex;align-items:center;gap:4px;background:var(--pk1);color:var(--pk5);font-size:11px;font-weight:700;border-radius:20px;padding:3px 10px;margin-top:4px}
+
 .mat-row{display:grid;grid-template-columns:1fr 60px 72px 36px;gap:6px;align-items:center;margin-bottom:6px}
-.mat-row input[type=text]{font-size:13px}
-.mat-row input[type=number]{font-size:13px;text-align:center}
+.col-labels-mat{display:grid;grid-template-columns:1fr 60px 72px 36px;gap:6px;margin-bottom:4px}
 .btn-del{width:36px;height:36px;border:1.5px solid var(--pk1);border-radius:10px;background:var(--pk0);color:var(--pk2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;transition:all .15s}
 .btn-del:hover{background:var(--pk1);color:var(--pk5)}
 .btn-add{width:100%;height:36px;border:2px dashed var(--pk1);border-radius:20px;background:transparent;color:var(--pk3);cursor:pointer;font-size:12px;font-family:'Nunito',sans-serif;font-weight:700;display:flex;align-items:center;justify-content:center;gap:5px;transition:background .15s}
 .btn-add:hover{background:var(--pk0)}
-.mat-col-labels{display:grid;grid-template-columns:1fr 60px 72px 36px;gap:6px;margin-bottom:4px}
-.mat-col-labels span{font-size:10px;font-weight:700;color:var(--pk2);text-align:center}
-.mat-col-labels span:first-child{text-align:left}
-
-.helper-tag{display:inline-flex;align-items:center;gap:4px;background:var(--pk1);color:var(--pk5);font-size:11px;font-weight:700;border-radius:20px;padding:3px 10px;margin-top:4px}
+.divider{border:none;border-top:1.5px dashed var(--pk1);margin:10px 0}
 
 .result-card{background:var(--pk3);border-radius:20px;padding:1.25rem;margin-top:.5rem}
 .res-title{font-size:11px;font-weight:800;color:#F4C0D1;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;display:flex;align-items:center;gap:6px}
@@ -66,7 +62,6 @@ select option{background:#fff;color:var(--pk5)}
 
 <div class="app">
 <h2 class="sr-only">Calculadora de costos Lotso Paper</h2>
-
 <div class="brand">
   <div class="brand-name">Lotso Paper</div>
   <div class="brand-sub">calculadora de costos</div>
@@ -116,41 +111,28 @@ select option{background:#fff;color:var(--pk5)}
 </div>
 
 <div class="section">
-  <div class="stitle"><i class="ti ti-file" aria-hidden="true"></i> hoja</div>
+  <div class="stitle"><i class="ti ti-file" aria-hidden="true"></i> hojas</div>
   <div class="pill-row" id="paperToggle">
     <button class="pill on" data-v="direct" onclick="setPaperMode('direct')">Precio por hoja</button>
     <button class="pill" data-v="block" onclick="setPaperMode('block')">Calcular desde block</button>
   </div>
-  <div id="paperDirect">
-    <div class="row2">
-      <div class="field"><label>Tipo de hoja</label>
-        <select id="paperType" onchange="calc()">
-          <option value="">— seleccionar —</option>
-          <option>Normal</option><option>Premium</option><option>Glossy</option><option>Fotográfico</option><option>Reciclado</option><option>Otro</option>
-        </select>
-      </div>
-      <div class="field"><label>Precio por hoja ($)</label><input type="number" id="paperPrice" min="0" step="1" placeholder="0" oninput="calc()"></div>
-    </div>
+
+  <div id="paperDirectLabels" class="col-labels" style="grid-template-columns:1fr 80px 90px 36px;display:grid">
+    <span style="text-align:left">tipo de hoja</span><span>cantidad</span><span>precio c/u ($)</span><span></span>
   </div>
-  <div id="paperBlock" style="display:none">
-    <div class="row3">
-      <div class="field"><label>Tipo de hoja</label>
-        <select id="paperTypeB" onchange="calc()">
-          <option value="">— seleccionar —</option>
-          <option>Normal</option><option>Premium</option><option>Glossy</option><option>Fotográfico</option><option>Reciclado</option><option>Otro</option>
-        </select>
-      </div>
-      <div class="field"><label>Precio del block ($)</label><input type="number" id="blockPrice" min="0" step="1" placeholder="0" oninput="calc()"></div>
-      <div class="field"><label>Hojas en el block</label><input type="number" id="blockQty" min="1" placeholder="ej: 500" oninput="calc()"></div>
-    </div>
-    <div id="paperHelper"></div>
+  <div id="paperBlockLabels" class="col-labels" style="grid-template-columns:1fr 80px 80px 80px 36px;display:none">
+    <span style="text-align:left">tipo de hoja</span><span>cantidad</span><span>precio block ($)</span><span>hojas block</span><span></span>
   </div>
+
+  <div id="paperList"></div>
+  <button class="btn-add" onclick="addPaper()"><i class="ti ti-plus" aria-hidden="true"></i> agregar tipo de hoja</button>
+  <div id="paperSummary" style="margin-top:8px"></div>
 </div>
 
 <div class="section">
   <div class="stitle"><i class="ti ti-sparkles" aria-hidden="true"></i> materiales extra</div>
-  <div id="matColLabels" style="display:none" class="mat-col-labels">
-    <span>nombre</span><span>cant.</span><span>precio c/u</span><span></span>
+  <div id="matColLabels" style="display:none" class="col-labels-mat">
+    <span style="text-align:left">nombre</span><span style="text-align:center">cant.</span><span style="text-align:center">precio c/u</span><span></span>
   </div>
   <div id="matList"></div>
   <button class="btn-add" onclick="addMat()"><i class="ti ti-plus" aria-hidden="true"></i> agregar material</button>
@@ -165,7 +147,7 @@ select option{background:#fff;color:var(--pk5)}
 </div>
 
 <div class="result-card">
-  <div class="res-title"><i class="ti ti-receipt" aria-hidden="true"></i> desglose de costos <span id="copiesLbl" style="font-size:10px;font-weight:400;color:#E093B2;text-transform:none;margin-left:4px">(por unidad)</span></div>
+  <div class="res-title"><i class="ti ti-receipt" aria-hidden="true"></i> desglose <span id="copiesLbl" style="font-size:10px;font-weight:400;color:#E093B2;text-transform:none;margin-left:4px">(por unidad)</span></div>
   <div id="breakdown"></div>
   <div class="total-block">
     <div>
@@ -178,34 +160,27 @@ select option{background:#fff;color:var(--pk5)}
 </div>
 
 <script>
-let inkMode='individual',colorMode='bw',paperMode='direct',mats=[];
+let inkMode='individual',colorMode='bw',paperMode='direct';
+let papers=[{id:Date.now(),type:'Normal',qty:1,price:0,blockPrice:0,blockQty:0}];
+let mats=[];
 
-function setInkMode(m){
-  inkMode=m;
-  document.getElementById('inkIndividual').style.display=m==='individual'?'':'none';
-  document.getElementById('inkTotal').style.display=m==='total'?'':'none';
-  document.querySelectorAll('#inkToggle .pill').forEach(b=>b.classList.toggle('on',b.dataset.v===m));
-  calc();
-}
-function setColorMode(m){
-  colorMode=m;
-  document.querySelectorAll('#colorToggle .pill').forEach(b=>b.classList.toggle('on',b.dataset.v===m));
-  calc();
-}
+const PAPER_TYPES=['Normal','Premium','Glossy','Fotográfico','Reciclado','Otro'];
+
+function setInkMode(m){inkMode=m;document.getElementById('inkIndividual').style.display=m==='individual'?'':'none';document.getElementById('inkTotal').style.display=m==='total'?'':'none';document.querySelectorAll('#inkToggle .pill').forEach(b=>b.classList.toggle('on',b.dataset.v===m));calc();}
+function setColorMode(m){colorMode=m;document.querySelectorAll('#colorToggle .pill').forEach(b=>b.classList.toggle('on',b.dataset.v===m));calc();}
 function setPaperMode(m){
   paperMode=m;
-  document.getElementById('paperDirect').style.display=m==='direct'?'':'none';
-  document.getElementById('paperBlock').style.display=m==='block'?'':'none';
+  document.getElementById('paperDirectLabels').style.display=m==='direct'?'grid':'none';
+  document.getElementById('paperBlockLabels').style.display=m==='block'?'grid':'none';
   document.querySelectorAll('#paperToggle .pill').forEach(b=>b.classList.toggle('on',b.dataset.v===m));
-  calc();
+  renderPapers();calc();
 }
 
 function n(id){return parseFloat(document.getElementById(id).value)||0;}
-function t(id){return document.getElementById(id).value||'';}
 
 function fmtN(val){
   if(val===0)return '$0';
-  if(Number.isInteger(val)||val>=10)return '$'+Math.round(val);
+  if(val>=10||Number.isInteger(val))return '$'+Math.round(val);
   return '$'+val.toFixed(1).replace(/\.0$/,'');
 }
 
@@ -215,48 +190,91 @@ function inkCPP(){
   if(colorMode==='bw')return bk;
   return bk+(n('yc')>0?n('pc')/n('yc'):0)+(n('ym')>0?n('pm')/n('ym'):0)+(n('yy')>0?n('py')/n('yy'):0);
 }
-function paperCPP(){
-  if(paperMode==='direct')return n('paperPrice');
-  const bp=n('blockPrice'),bq=n('blockQty'),cpp=bq>0?bp/bq:0;
-  const el=document.getElementById('paperHelper');
-  el.innerHTML=cpp>0?`<span class="helper-tag"><i class="ti ti-arrow-right" aria-hidden="true" style="font-size:11px"></i> cada hoja: ${fmtN(cpp)}</span>`:'';
-  return cpp;
+
+function paperCostForRow(p){
+  if(paperMode==='direct') return p.price*(p.qty||1);
+  const cpp=p.blockQty>0?p.blockPrice/p.blockQty:0;
+  return cpp*(p.qty||1);
 }
+function paperCPPForRow(p){
+  if(paperMode==='direct') return p.price;
+  return p.blockQty>0?p.blockPrice/p.blockQty:0;
+}
+
+function addPaper(){
+  papers.push({id:Date.now(),type:'Normal',qty:1,price:0,blockPrice:0,blockQty:0});
+  renderPapers();calc();
+}
+function delPaper(id){if(papers.length===1)return;papers=papers.filter(p=>p.id!==id);renderPapers();calc();}
+function updPaper(id,k,v){const p=papers.find(x=>x.id===id);if(p)p[k]=k==='type'?v:parseFloat(v)||0;calc();}
+
+function renderPapers(){
+  const el=document.getElementById('paperList');
+  if(paperMode==='direct'){
+    el.innerHTML=papers.map(p=>`
+      <div class="paper-row">
+        <select onchange="updPaper(${p.id},'type',this.value)">${PAPER_TYPES.map(t=>`<option${t===p.type?' selected':''}>${t}</option>`).join('')}</select>
+        <input type="number" value="${p.qty||1}" min="1" placeholder="1" onchange="updPaper(${p.id},'qty',this.value)" style="text-align:center">
+        <input type="number" value="${p.price||''}" min="0" step="1" placeholder="$0" onchange="updPaper(${p.id},'price',this.value)">
+        <button class="btn-del" onclick="delPaper(${p.id})" aria-label="eliminar"${papers.length===1?' disabled style="opacity:.3;cursor:default"':''}><i class="ti ti-trash" aria-hidden="true"></i></button>
+      </div>`).join('');
+  } else {
+    el.innerHTML=papers.map(p=>{
+      const cpp=p.blockQty>0?p.blockPrice/p.blockQty:0;
+      return`<div>
+        <div class="paper-row-block">
+          <select onchange="updPaper(${p.id},'type',this.value)">${PAPER_TYPES.map(t=>`<option${t===p.type?' selected':''}>${t}</option>`).join('')}</select>
+          <input type="number" value="${p.qty||1}" min="1" placeholder="1" onchange="updPaper(${p.id},'qty',this.value)" style="text-align:center">
+          <input type="number" value="${p.blockPrice||''}" min="0" step="1" placeholder="$0" onchange="updPaper(${p.id},'blockPrice',this.value)">
+          <input type="number" value="${p.blockQty||''}" min="1" placeholder="ej: 500" onchange="updPaper(${p.id},'blockQty',this.value)">
+          <button class="btn-del" onclick="delPaper(${p.id})" aria-label="eliminar"${papers.length===1?' disabled style="opacity:.3;cursor:default"':''}><i class="ti ti-trash" aria-hidden="true"></i></button>
+        </div>
+        ${cpp>0?`<span class="paper-tag"><i class="ti ti-arrow-right" style="font-size:11px" aria-hidden="true"></i> cada hoja ${p.type}: ${fmtN(cpp)}</span>`:''}
+      </div>`;
+    }).join('');
+  }
+}
+
 function addMat(){mats.push({id:Date.now(),name:'',price:0,qty:1});renderMats();}
 function delMat(id){mats=mats.filter(m=>m.id!==id);renderMats();calc();}
-function updMat(id,k,v2){const m=mats.find(x=>x.id===id);if(m)m[k]=k==='name'?v2:parseFloat(v2)||0;calc();}
+function updMat(id,k,v){const m=mats.find(x=>x.id===id);if(m)m[k]=k==='name'?v:parseFloat(v)||0;calc();}
 function renderMats(){
   document.getElementById('matColLabels').style.display=mats.length?'grid':'none';
   document.getElementById('matList').innerHTML=mats.map(m=>`
     <div class="mat-row">
       <input type="text" placeholder="ej: ganchitos" value="${m.name}" onchange="updMat(${m.id},'name',this.value)">
-      <input type="number" value="${m.qty}" min="1" placeholder="1" onchange="updMat(${m.id},'qty',this.value)">
+      <input type="number" value="${m.qty}" min="1" placeholder="1" onchange="updMat(${m.id},'qty',this.value)" style="text-align:center">
       <input type="number" value="${m.price||''}" min="0" step="1" placeholder="$0" onchange="updMat(${m.id},'price',this.value)">
       <button class="btn-del" onclick="delMat(${m.id})" aria-label="eliminar"><i class="ti ti-trash" aria-hidden="true"></i></button>
     </div>`).join('');
 }
+
 function calc(){
-  const ink=inkCPP(),paper=paperCPP();
+  const ink=inkCPP();
   const copies=Math.max(1,n('copies')),margin=n('margin');
+  const totalPaperQty=papers.reduce((s,p)=>s+(p.qty||1),0);
+  const inkTotal=ink*totalPaperQty;
+  const paperRows=papers.map(p=>({label:p.type,qty:p.qty||1,cost:paperCostForRow(p),cpp:paperCPPForRow(p)}));
+  const totalPaperCost=paperRows.reduce((s,r)=>s+r.cost,0);
   const matTotal=mats.reduce((s,m)=>s+(m.price*(m.qty||1)),0);
-  const cost=ink+paper+matTotal;
+  const cost=inkTotal+totalPaperCost+matTotal;
   const suggested=cost*(1+margin/100);
   const total=suggested*copies;
-  const ptype=paperMode==='direct'?t('paperType'):t('paperTypeB');
+
   const rows=[];
-  if(ink>0)rows.push(['tinta por hoja',fmtN(ink)]);
-  if(paper>0)rows.push(['hoja'+(ptype?' · '+ptype:''),fmtN(paper)]);
-  mats.filter(m=>m.name||m.price>0).forEach(m=>{
-    const sub=m.price*(m.qty||1);
-    if(sub>0)rows.push([(m.name||'material')+(m.qty>1?' ×'+m.qty:''),fmtN(sub)]);
-  });
-  const el=document.getElementById('breakdown');
-  el.innerHTML=rows.length
-    ?rows.map(([l,v2])=>`<div class="res-row"><span>${l}</span><span class="val">${v2}</span></div>`).join('')
+  if(inkTotal>0) rows.push([`tinta (${totalPaperQty} ${totalPaperQty===1?'hoja':'hojas'})`,fmtN(inkTotal)]);
+  paperRows.forEach(r=>{if(r.cost>0||r.qty>0)rows.push([`${r.label} ×${r.qty} ${r.qty===1?'hoja':'hojas'}`,fmtN(r.cost)]);});
+  mats.filter(m=>m.name||m.price>0).forEach(m=>{const sub=m.price*(m.qty||1);if(sub>0)rows.push([(m.name||'material')+(m.qty>1?' ×'+m.qty:''),fmtN(sub)]);});
+
+  document.getElementById('breakdown').innerHTML=rows.length
+    ?rows.map(([l,v])=>`<div class="res-row"><span>${l}</span><span class="val">${v}</span></div>`).join('')
     :'<div class="res-empty">completá los campos para ver el desglose ♡</div>';
   document.getElementById('copiesLbl').textContent=copies>1?`(por unidad × ${copies} copias)`:'(por unidad)';
   document.getElementById('totalVal').textContent=fmtN(total);
   document.getElementById('totalSub').textContent=margin>0?`costo ${fmtN(cost)} + ${margin}% ganancia`:'solo costos, sin ganancia';
 }
+
+renderPapers();
+renderMats();
 calc();
 </script>
